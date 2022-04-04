@@ -1,3 +1,4 @@
+import random
 import numpy
 
 m1 = numpy.array(
@@ -40,3 +41,37 @@ print(sutun_list)
 k = numpy.reshape(m2, (2, 4))
 print(k)
 print(k.shape)
+
+
+m = numpy.array([[1,  2,  3,  4,  5,  6, ],
+                [2,  3,  4,  5,  7,  5.4]])
+
+# m matrisinin 1. satır 4. sutunu ile 2. satır 5 sutunu çarpımını ekrana
+# yazan python kodunu yazınız.
+
+print(m[0][3] * m[1][4])
+
+
+# m matrisinin 1 satır 6 sutunundaki elemanı 10 yapın
+
+m[0][5] = 10
+
+print(m)
+
+# Soru=0 ile 20 arasındaki sayılardan 5,6 boyutundaki bir matrisi oluşturunuz.
+#  (sayı sırası önemli değildir,
+# sadece degerlerin 0 ile 20 arasında olmasına dikkat ediniz.)
+
+print("-------------------------------------")
+liste = []
+
+for k in range(30):
+    uretilen = int(random.uniform(0, 20))
+    liste.append(uretilen)
+
+print(liste)
+
+v = numpy.array(liste)
+v = numpy.reshape(v, (5, 6))
+
+print(v)
